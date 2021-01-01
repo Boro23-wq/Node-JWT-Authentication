@@ -10,4 +10,14 @@
 <body>
   <nav>
     <h1><a href="/">Boro Smoothies</a></h1>
+    <ul>
+      <% if (user) { %>
+        <li>Welcome, <%= user.email %>
+        </li>
+        <li><a href="/logout">Logout</a></li>
+        <% } else { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup" class="btn">Sign up</a></li>
+          <% } %>
+    </ul>
   </nav>
